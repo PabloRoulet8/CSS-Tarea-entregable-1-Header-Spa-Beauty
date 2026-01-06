@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    
+    
+    .logo {
+        width: 150px;
+    }
+    
+    ul {
+        @include reset-list;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    
+        li {
+            a {
+                text-decoration: none;
+                color: $color-blue;
+                font-weight: $nav-font-weight;
+                font-size: $nav-font-size;
+
+                &:hover {
+                color: #007BFF;
+                }
+
+                &.button {
+                    @include button;
+                }
+            }
+        }
+        &.secondary-nav {
+            align-items: center;
+            background-color: $color-green;
+            padding: 20px 40px;
+
+            & li a {
+                &.subrayado {
+                    text-decoration: underline;
+                }
+
+                & img {
+                width: 24px;
+                height: 24px;
+                }
+            }
+        }
+    }
+}

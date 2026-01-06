@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $principal-font;
+}
+
+body {
+  background-color: $color-white;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: relative; 
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/woman.png");
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    z-index: 1;
+  }
+}
+
+

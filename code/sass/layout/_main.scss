@@ -1,0 +1,168 @@
+.secondary-container {
+    display: flex;
+    padding-bottom: 100px;
+    & .first-container {
+        width: 45%;
+        
+        & .hero {
+            &-title h2 {
+                font-size: $h1-font-size;
+                font-weight: $h1-font-weight;
+                color: $color-blue;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            &-subtitle p {
+                font-size: $p-hero-font-size;
+                font-weight: $p-hero-font-weight;
+                color: $color-gray;
+                margin-bottom: 30px;
+            }
+
+            &-buttons ul {
+                @include reset-list;
+                display: flex;
+                align-items: center; 
+                gap: 20px;
+                margin-bottom: 60px;
+
+                & li a {
+                    text-decoration: none;
+                    color: $color-blue;
+                    font-weight: $nav-font-weight;
+                    font-size: $nav-font-size;
+                    
+                    &:hover {
+                        color: #007BFF;
+                    }
+                    &.button {
+                        @include button;
+                    }
+                }
+
+                & li.play a {
+                    display: flex;
+                    align-items: center;
+
+                    & span {
+                        background-color: $color-white;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); // Added a subtle shadow for better appearance
+
+                        & img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        & .information {
+            display: flex;
+            gap: 40px;
+            background-color: white;
+            padding: 30px 35px;
+            border-radius: 20px;
+            width: 80%;
+            & div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                & img {
+                    margin-bottom: 10px;
+                    width: 50px;
+                    height: 50px;;
+                }
+
+                & h3 {
+                    font-size: $h3-information-font-size;
+                    font-weight: $h3-information-font-weight;
+                    color: $color-blue;
+                    margin-bottom: 5px;
+                }
+
+                & p {
+                    font-size: $p-information-font-size;
+                    font-weight: $p-information-font-weight;
+                    color: $color-gray;
+                }
+            }
+        }
+    }
+
+    & .second-container {
+        width: 33%;
+        margin-left: auto;
+        background-color: $color-green;
+        margin-top: -20px;
+        position: relative;
+        isolation: isolate;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("../img/fondo-flor.png");
+            background-repeat: no-repeat;
+            background-position-x: -40%;
+            background-size: 300px;
+            opacity: .1;
+            z-index: 1;
+        }        
+    }
+    & .opinions {
+        position: relative;
+        height: 100%;
+        margin-top: 50px;
+        z-index: 3;
+        
+        & img {
+            width: 20px;
+        }
+        
+        & p {
+            font-size: $p-opinions-font-size;
+            font-weight: $p-opinions-font-weight;
+            color: black;
+            margin-bottom: 15px;
+
+            &.name {
+                font-weight: $p-opinions-name-weight;
+                color: $color-blue;
+            }
+        }
+
+        & .opinion1, .opinion2 {
+            background-color: $color-white;
+            padding: 10px;
+            border-radius: 20px;
+            opacity: 0.7;
+            width: 200px;
+            position: absolute;
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.05);
+        }
+
+        & .opinion1 {
+            top: 140px;
+            right: 50px;
+        }
+
+        & .opinion2 {
+            top: 320px;
+            right: 180px;
+        }
+    }
+}
+
+

@@ -1,0 +1,19 @@
+/* Error: Undefined variable.
+ *   ,
+ * 2 |     font-family: $roboto-font;
+ *   |                  ^^^^^^^^^^^^
+ *   '
+ *   sass\themes\_default.scss 2:18  @import
+ *   sass\themes\_themes.scss 1:9    @import
+ *   sass\app.scss 7:9               root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502      font-family: $roboto-font;\a   \2502                   ^^^^^^^^^^^^\a   \2575 \a   sass\\themes\\_default.scss 2:18  @import\a   sass\\themes\\_themes.scss 1:9    @import\a   sass\\app.scss 7:9               root stylesheet";
+}
